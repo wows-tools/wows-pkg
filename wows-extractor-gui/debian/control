@@ -9,10 +9,10 @@ Build-Depends: debhelper-compat (= 13),
                qt6-quick3d-dev,
                zlib1g-dev,
                libpcre2-dev,
-               libmeshoptimizer-dev,
-               libtinygltf-dev,
-               libstb-dev,
                python3-dev,
+               libtinygltf-dev,
+               libwows-depack-dev,
+               libwows-geometry-dev,
                g++
 Standards-Version: 4.6.1
 Homepage: https://github.com/wows-tools/wows-extractor-gui

@@ -7,6 +7,12 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	dh_auto_install
+	install -Dm644 inc/wows-model-exporter.h \
+		$(CURDIR)/debian/libwows-geometry-dev/usr/include/wows-model-exporter.h
+	install -Dm644 inc/wows-game-params.h \
+		$(CURDIR)/debian/libwows-geometry-dev/usr/include/wows-game-params.h
+	install -Dm644 inc/wows-assets-bin.h \
+		$(CURDIR)/debian/libwows-geometry-dev/usr/include/wows-assets-bin.h
 
 override_dh_auto_clean:
 	dh_auto_clean

@@ -7,6 +7,10 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	dh_auto_install
+	install -Dm644 assets/wows-extractor.desktop \
+		$(CURDIR)/debian/wows-extractor-gui/usr/share/applications/wows-extractor.desktop
+	install -Dm644 assets/wows-extractor.png \
+		$(CURDIR)/debian/wows-extractor-gui/usr/share/icons/hicolor/256x256/apps/wows-extractor.png
 
 override_dh_auto_clean:
 	dh_auto_clean
