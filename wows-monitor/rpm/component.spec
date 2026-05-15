@@ -36,10 +36,13 @@ cp -dr --no-preserve=ownership release/build/linux-unpacked/. %{buildroot}/%{_da
 install -d %{buildroot}/%{_datadir}/applications
 install -Dm644 debian/wows-monitor.desktop \
     %{buildroot}/%{_datadir}/applications/wows-monitor.desktop
+install -d %{buildroot}/%{_bindir}
+ln -s %{_datadir}/wows-monitor/wows-monitor %{buildroot}/%{_bindir}/wows-monitor
 
 %files
 %{_datadir}/wows-monitor/
 %{_datadir}/applications/wows-monitor.desktop
+%{_bindir}/wows-monitor
 
 %changelog
 * %(date "+%a %b %d %Y") Your Name <your.email@example.com> - %{version}-%{release}

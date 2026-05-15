@@ -17,6 +17,8 @@ override_dh_auto_install:
 	install -d debian/wows-monitor/usr/share/applications
 	install -Dm644 debian/wows-monitor.desktop \
 	    debian/wows-monitor/usr/share/applications/wows-monitor.desktop
+	install -d debian/wows-monitor/usr/bin
+	ln -s /usr/share/wows-monitor/wows-monitor debian/wows-monitor/usr/bin/wows-monitor
 
 override_dh_auto_test:
 	# No automated tests.
