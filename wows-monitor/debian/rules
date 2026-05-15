@@ -25,4 +25,5 @@ override_dh_auto_clean:
 	rm -rf node_modules release/build dist
 
 override_dh_shlibdeps:
-	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info \
+	    -l/usr/share/wows-monitor
