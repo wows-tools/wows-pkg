@@ -1,0 +1,24 @@
+Source: wows-toolkit
+Section: games
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               rustup,
+               pkg-config,
+               libssl-dev
+Standards-Version: 4.6.1
+Homepage: https://github.com/landaire/wows-toolkit
+
+Package: wows-toolkit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: mesa-vulkan-drivers | libvulkan1
+Description: World of Warships tools suite
+ wows-toolkit is a Swiss army knife for World of Warships, providing:
+  - wows_toolkit: GUI application for browsing replays, extracting game
+    files, and previewing ship armor models (requires Vulkan/OpenGL 3.3+)
+  - wowsunpack: command-line tool for unpacking IDX/PKG game asset archives
+  - replayshark: command-line tool for analysing replay files
+ .
+ Note: Build requires Rust 1.92 or later. Debian's rustc package may be
+ too old; install a recent toolchain via rustup if needed.

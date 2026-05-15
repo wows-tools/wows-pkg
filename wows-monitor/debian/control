@@ -1,0 +1,23 @@
+Source: wows-monitor
+Section: games
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               nodejs,
+               npm
+Standards-Version: 4.6.1
+Homepage: https://wows-monitor.com/
+
+Package: wows-monitor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Matchmaking monitor for World of Warships
+ wows-monitor is a real-time companion application for World of Warships
+ that displays current player statistics for allies and enemies during
+ an active match.
+ .
+ The application fetches public player data and presents winrate, battles
+ played, ship mastery and other statistics in an overlay or side window.
+ .
+ Note: build downloads npm packages and the Electron runtime from the
+ internet; an internet-connected build environment is required.

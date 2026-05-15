@@ -1,0 +1,26 @@
+Source: wows-extractor-gui
+Section: utils
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               qt6-base-dev,
+               qt6-declarative-dev,
+               qt6-quick3d-dev,
+               zlib1g-dev,
+               libpcre2-dev,
+               libmeshoptimizer-dev,
+               libtinygltf-dev,
+               libstb-dev,
+               python3-dev,
+               g++
+Standards-Version: 4.6.1
+Homepage: https://github.com/wows-tools/wows-extractor-gui
+
+Package: wows-extractor-gui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: World of Warships graphical resource extractor and model viewer
+ Qt6 graphical tool for browsing World of Warships resource packages,
+ extracting files, and previewing ship 3D geometry in glTF/GLB format.
+ Requires OpenGL 3.3 Core support and a local World of Warships installation.

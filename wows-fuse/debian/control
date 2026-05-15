@@ -1,0 +1,21 @@
+Source: wows-fuse
+Section: utils
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               pkg-config,
+               libfuse3-dev,
+               libwows-depack-dev,
+               zlib1g-dev,
+               libpcre2-dev,
+               gcc
+Standards-Version: 4.6.1
+Homepage: https://github.com/wows-tools/wows-fuse
+
+Package: wows-fuse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: FUSE filesystem for World of Warships resource packages
+ Mounts World of Warships .idx/.pkg resource packages as a virtual filesystem,
+ enabling exploration and access to game resources without manual extraction.

@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+export HOME=/tmp
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	npm install
+
+override_dh_auto_build:
+	npm run electron:package:l
+
+override_dh_auto_install:
+	install -d debian/wows-monitor/usr/share/wows-monitor
+	cp -dr --no-preserve=ownership release/build/linux-unpacked/. debian/wows-monitor/usr/share/wows-monitor/
+	install -d debian/wows-monitor/usr/share/applications
+	install -Dm644 debian/wows-monitor.desktop \
+	    debian/wows-monitor/usr/share/applications/wows-monitor.desktop
+
+override_dh_auto_test:
+	# No automated tests.
+
+override_dh_auto_clean:
+	rm -rf node_modules release/build dist
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info

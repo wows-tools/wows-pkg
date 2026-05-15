@@ -1,0 +1,6 @@
+wows-toolkit (0.1.68-1) unstable; urgency=medium
+
+  * Initial release.
+  * Package wows-toolkit 0.1.68.
+
+ -- Your Name <your.email@example.com>  $(date -R)

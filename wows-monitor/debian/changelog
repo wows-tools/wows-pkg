@@ -1,0 +1,15 @@
+wows-monitor (1.3.4-1) unstable; urgency=medium
+
+  * Update to 1.3.4 from upstream Azure DevOps repo.
+  * Switch to Angular 17 / webpack build system.
+  * Drop Fix-filesaverjs-capitalization patch (fixed upstream).
+  * Update electron-builder target patch for new deb/pacman → dir.
+
+ -- Your Name <your.email@example.com>  $(date -R)
+
+wows-monitor (1.2.1-1) unstable; urgency=medium
+
+  * Initial release.
+  * Package wows-monitor 1.2.1.
+
+ -- Your Name <your.email@example.com>  $(date -R)

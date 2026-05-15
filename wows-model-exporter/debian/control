@@ -1,0 +1,38 @@
+Source: wows-model-exporter
+Section: utils
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               zlib1g-dev,
+               libpcre2-dev,
+               libmeshoptimizer-dev,
+               libtinygltf-dev,
+               python3-dev,
+               g++
+Standards-Version: 4.6.1
+Homepage: https://github.com/wows-tools/wows-model-exporter
+
+Package: wows-model-exporter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libwows-geometry0 (= ${binary:Version})
+Description: World of Warships 3D model export tools
+ Command-line tools for exporting World of Warships ship geometry to glTF/GLB
+ format. Includes wows-geometry-cli, wows-gltf-exporter, and wows-list-ships.
+
+Package: libwows-geometry0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: World of Warships geometry parsing library
+ Shared library for parsing World of Warships ship geometry data and
+ exporting it to standard 3D formats.
+
+Package: libwows-geometry-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libwows-geometry0 (= ${binary:Version})
+Description: Development files for libwows-geometry
+ Development files for the wows-geometry library, including header files
+ needed for developing applications that use the library.

@@ -1,0 +1,34 @@
+Source: wows-splash
+Section: utils
+Priority: optional
+Maintainer: @MAINTAINER@ <@MAINTAINER_EMAIL@>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               gcc,
+               zlib1g-dev
+Standards-Version: 4.6.1
+Homepage: https://github.com/wows-tools/wows-splash
+
+Package: wows-splash-cli
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libwows-splash0 (= ${binary:Version})
+Description: Command-line parser for World of Warships splash files
+ Command-line interface for parsing the .splash file format used in
+ World of Warships, which describes ship hitbox geometry.
+
+Package: libwows-splash0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for parsing World of Warships splash files
+ Shared library for parsing World of Warships .splash files.
+ This package contains the runtime library.
+
+Package: libwows-splash-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libwows-splash0 (= ${binary:Version})
+Description: Development files for libwows-splash
+ Development files for the wows-splash library, including header files
+ needed for developing applications that use wows-splash.
