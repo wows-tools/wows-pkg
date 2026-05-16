@@ -18,6 +18,8 @@ DESCRIPTION=wows-monitor is a real-time companion application for World of Warsh
 
 LICENSE=unknown
 
+SKIP=>=:deb:0 >=:el:0 >=:fc:0 >=:ubu:0.4
+
 # Allow network inside chroot for npm install
 COWBUILD_BUILD_ADDITIONAL_ARGS=--use-network yes
 
