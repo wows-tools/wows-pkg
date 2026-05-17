@@ -59,36 +59,6 @@ EOF
 ${SUDO} apt update
 ```
 
-## RHEL/Rocky/Fedora
-
-If you are using `RHEL`/`Rocky`/`Fedora`, here how to install the repository:
-
-```shell
-# If you are not root
-export SUDO=sudo
-
-# Get your OS version
-. /etc/os-release
-
-# Determine distro prefix (el for RHEL/Rocky, fc for Fedora)
-if [[ "$ID" == "fedora" ]]; then
-    DISTRO_PREFIX="fc"
-else
-    DISTRO_PREFIX="el"
-fi
-
-# Create the repository file
-cat << EOF | ${SUDO} tee -a /etc/dnf/dnf.conf
-
-[wows-pkg]
-name=wows-pkg
-baseurl=https://wows-tools.github.io/wows-pkg/rpm.${DISTRO_PREFIX}\$releasever.\$basearch/\$releasever/\$basearch/
-enabled=1
-gpgcheck=1
-gpgkey=https://wows-tools.github.io/wows-pkg/GPG-KEY.pub
-EOF
-```
-
 ## Building
 
 Check the [pakste documentation](https://kakwa.github.io/pakste/).
