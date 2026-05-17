@@ -21,7 +21,7 @@ LICENSE=MIT
 # Allow network inside chroot for rustup + cargo fetch
 COWBUILD_BUILD_ADDITIONAL_ARGS=--use-network yes
 
-#SKIP=>=:deb:0 >=:el:0 >=:fc:0 >=:ubu:0.4
+SKIP=>=:deb:0 >=:el:0 >=:fc:0 >=:ubu:0.4
 
 ###############################################################################
 # Rule #
