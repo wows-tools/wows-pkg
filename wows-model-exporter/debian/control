@@ -8,6 +8,8 @@ Build-Depends: debhelper-compat (= 13),
                libpcre2-dev,
                libmeshoptimizer-dev,
                libtinygltf-dev,
+               libwows-depack-dev,
+               libstb-dev,
                python3-dev,
                g++
 Standards-Version: 4.6.1

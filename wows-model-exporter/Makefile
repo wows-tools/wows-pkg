@@ -2,7 +2,7 @@
 NAME = wows-model-exporter
 
 # Version
-VERSION = 0.1.0
+VERSION = 0.2.0
 
 # Revision number
 RELEASE = 1
@@ -29,6 +29,5 @@ REVISION = main
 # Including common rules and targets
 include buildenv/Makefile.common
 
-# Uses git_sum.sh with submodule support (-s) to include deps/wows-depack
 $(SOURCE_ARCHIVE): $(SOURCE_DIR) $(CACHE) Makefile MANIFEST
-	$(GS) -u $(URL) -o $(SOURCE_ARCHIVE) -r $(REVISION) -s
+	$(GS) -u $(URL) -o $(SOURCE_ARCHIVE) -r $(REVISION)
