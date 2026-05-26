@@ -2,7 +2,7 @@
 NAME = wows-depack
 
 # Version
-VERSION = 0.4.0
+VERSION = 0.5.1
 
 # Revision number 
 RELEASE = 1
